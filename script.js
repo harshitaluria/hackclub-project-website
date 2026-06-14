@@ -1,20 +1,43 @@
 // =========================
-// Skeleton Loader
+// Smart Skeleton Loader
 // =========================
 
-window.addEventListener("load", () => {
+const connection =
+  navigator.connection ||
+  navigator.mozConnection ||
+  navigator.webkitConnection;
 
-  setTimeout(() => {
+const isSlow =
+  connection &&
+  (
+    connection.effectiveType === "2g" ||
+    connection.effectiveType === "slow-2g"
+  );
 
-    document.getElementById("loader").style.display = "none";
+if(isSlow){
 
-    document
-      .getElementById("content")
-      .classList.remove("hidden");
+  window.addEventListener("load", () => {
 
-  }, 1800);
+    setTimeout(() => {
 
-});
+      document.getElementById("loader").style.display = "none";
+
+      document
+        .getElementById("content")
+        .classList.remove("hidden");
+
+    }, 1500);
+
+  });
+
+}else{
+
+  document.getElementById("loader").style.display = "none";
+
+  document
+    .getElementById("content")
+    .classList.remove("hidden");
+}
 
 // =========================
 // Reveal on Scroll
