@@ -10,7 +10,7 @@ html{
 
 body{
   font-family:'Quintessential',sans-serif;
-  background:#f8f5ef;
+  background:#f0f0d3;
   color:#3d2b1f;
   overflow-x:hidden;
 }
@@ -110,9 +110,9 @@ body{
   background:
     linear-gradient(
       90deg,
+      #382215,
       #5c3b28,
-      #7a5134,
-      #5c3b28
+      #382215
     );
 
   background-size: cover;
@@ -361,7 +361,7 @@ footer{
   padding:25px;
   text-align:center;
 
-  background:#4b3222;
+  background:#5c3b28;
   color:#f4e7d5;
 }
 
