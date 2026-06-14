@@ -143,7 +143,30 @@ body{
   pointer-events:none;
 }
 
-.logo{
+.logo-container{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo-img{
+  height:65px;
+  width:auto;
+
+  object-fit:contain;
+  display:block;
+
+  filter:
+    drop-shadow(0 3px 5px rgba(0,0,0,0.3));
+
+  transition:0.3s;
+}
+
+.logo-img:hover{
+  transform:scale(1.08) rotate(3deg);
+}
+
+.logo-text{
   font-size:2rem;
   font-weight:700;
   color:#f7f2ea;
