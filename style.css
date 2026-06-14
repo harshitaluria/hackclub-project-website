@@ -96,9 +96,9 @@ body{
 /* ========================= */
 
 .navbar{
-  position:sticky;
-  top:0;
-  z-index:999;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 
   display:flex;
   justify-content:space-between;
@@ -106,15 +106,41 @@ body{
 
   padding:18px 8%;
 
+  /* Wooden texture */
   background:
-  linear-gradient(
-    45deg,
-    #5b3a29,
-    #7a5230,
-    #5b3a29
-  );
+    linear-gradient(
+      90deg,
+      #5c3b28,
+      #7a5134,
+      #5c3b28
+    );
 
-  box-shadow:0 4px 15px rgba(0,0,0,0.2);
+  background-size: cover;
+
+  box-shadow:
+    inset 0 2px 3px rgba(255,255,255,0.08),
+    inset 0 -3px 6px rgba(0,0,0,0.2),
+    0 4px 12px rgba(0,0,0,0.25);
+
+  border-bottom: 3px solid #3f2719;
+}
+
+/* Wood grain effect */
+.navbar::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    repeating-linear-gradient(
+      8deg,
+      rgba(255,255,255,0.03),
+      rgba(255,255,255,0.03) 2px,
+      transparent 2px,
+      transparent 6px
+    );
+
+  pointer-events:none;
 }
 
 .logo{
@@ -173,25 +199,6 @@ body{
   line-height:1.8;
   color:#6d5643;
   margin-bottom:30px;
-}
-
-.hero-left button{
-  padding:14px 28px;
-  border:none;
-  border-radius:30px;
-
-  background:#6f4e37;
-  color:white;
-
-  font-size:1rem;
-  cursor:pointer;
-
-  transition:0.3s;
-}
-
-.hero-left button:hover{
-  transform:translateY(-4px);
-  box-shadow:0 10px 20px rgba(0,0,0,0.15);
 }
 
 .hero-right img{
