@@ -377,6 +377,7 @@ body{
 }
 
 .about-box p{
+  font-family:'Quintessential',sans-serif;
   margin-top:20px;
   line-height:1.9;
   color:#665243;
@@ -394,6 +395,7 @@ body{
 }
 
 .contact-box p{
+  font-family:'Quintessential',sans-serif;
   margin-top:12px;
   color:#6a5547;
 }
