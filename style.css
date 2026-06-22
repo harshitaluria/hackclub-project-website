@@ -446,10 +446,42 @@ body{
   text-align:center;
 }
 
-.contact-box p{
-  font-family:'Quintessential',sans-serif;
-  margin-top:12px;
-  color:#6a5547;
+/* Flex container to align buttons neatly */
+.contact-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; /* Prevents breaking on smaller screens */
+}
+
+/* Small Rectangular Button Styling */
+.btn-rect {
+  display: inline-block;
+  font-family: 'Quintessential', sans-serif;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  
+  /* Dimensions making it a small rectangle instead of a square */
+  padding: 10px 24px; 
+  border-radius: 8px;
+  
+  /* Colors matching your earthy palette */
+  background: #5c3b28;
+  color: #f4e7d5;
+  
+  border: 1px solid #3f2719;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.btn-rect:hover {
+  background: #382215;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Footer */
