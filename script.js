@@ -115,3 +115,25 @@ window.addEventListener(
   () => {},
   { passive: true }
 );
+
+// =========================
+// Hamburger Dropdown Menu Toggle
+// =========================
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navOverlay = document.querySelector('.nav-overlay');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+// Open/Close menu interaction
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('open');
+  navOverlay.classList.toggle('open');
+});
+
+// Auto-close overlay when clicking any of the internal section anchors
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('open');
+    navOverlay.classList.remove('open');
+  });
+});
